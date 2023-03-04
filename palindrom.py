@@ -7,7 +7,7 @@ slowo = input('Wpisz slowo ')
 
 #for i in range(liczba_iteracji):
 #    if slowo[i] != slowo[-1 -1]
-if slowo == slowo[::-1]:            #https:/www.w3schools.com/python/python
+if slowo == slowo[::-1]:            #https://www.w3schools.com/python/python_howto_reverse_string.asp
     print('TAK', 'palindrom')
 else:
     print('Nie, nie palindrom')
