@@ -1,6 +1,6 @@
 class Czlowiek:
     def __init__(self, imie, nazwisko, wiek):
-        self.imie = imie        #po lewej strony nazwy dla klasy
+        self.imie = imie        #po lewej strony nazwy dla klasy, dodajac __ w self.__imie blokujemy zmiany dla innych
         self.nazwisko = nazwisko
         self.wiek = wiek
         self.wyplata = 5000
