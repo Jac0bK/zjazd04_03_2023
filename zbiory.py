@@ -17,7 +17,7 @@ zbior_pusty = set()
 #a.union(b)
 # difference - roznica dwoch zbiorow
 #a.difference(b)
-
+'''''
 # sprawdzmy ile osob chorowalo w ostatnim roku na krzykach
 print('chorzy w ostatnim roku z krzykow to:', krzyki.intersection(chorzy_rok))
 print('liczba =', len(krzyki.intersection(chorzy_rok)))
@@ -25,6 +25,7 @@ print('liczba =', len(krzyki.intersection(chorzy_rok)))
 #ile osob mieszka w sumie w centrum i na krzykach
 print(krzyki.union(centrum))
 print('liczba =', len(krzyki.union(centrum)))
+
 
 #sprawdzamy poprawnosc dancyh:
 print('\nPoprawnosc danych')
@@ -50,6 +51,20 @@ if len(krzyki.intersection(centrum)) != 0:
            centrum.remove(pesel)
     else:
        print('zly wybor')
+'''''
+#kazdy chory,zdrowy, z krzykow, z centrum, powinien byc w bazie NFZ
+
+wszyscy = chorzy_rok.union(chorzy_miesiac.union(krzyki.union(centrum)))
+
+#print(wszyscy)
+
+poza_NFZ = wszyscy.difference(NFZ)
+
+if len(poza_NFZ) != 0:
+    print(poza_NFZ)
+    NFZ = NFZ.union(poza_NFZ)
+print(NFZ)
+
 
 
 
